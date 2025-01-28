@@ -35,7 +35,7 @@ h1 {
     flex: 1;
     margin: 10px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #21d19f;
     border: 1px solid black;
     border-radius: 5px;
 }
@@ -50,7 +50,7 @@ h1 {
 }
 
 .form-container {
-    background-color: #fff;
+    background-color: #a0a4b8;
     padding: 20px;
     border-radius: 5px;
     border: 1px solid black;
@@ -73,7 +73,7 @@ h1 {
 
 .form-container button {
     padding: 10px 20px;
-    background-color: #21d19f;
+    background-color: #7293a0;
     color: #fff;
     border: none;
     border-radius: 5px;
