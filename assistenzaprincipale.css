@@ -30,7 +30,7 @@ body {
     gap: 20px;
 }
 .box {
-    background: white;
+    background: #7293a0;
     padding: 30px;
     width: 400px;
     max-width: 100%;
@@ -41,7 +41,7 @@ body {
 .box i {
     font-size: 40px;
     margin-bottom: 15px;
-    color: #333;
+    color: #d8ddef;
 }
 .box h2 {
     font-size: 1.5em;
@@ -49,7 +49,7 @@ body {
 }
 .box p {
     font-size: 1em;
-    color: #666;
+    color: #d8ddef;
     margin-bottom: 20px;
 }
 .box a {
@@ -62,5 +62,5 @@ body {
     transition: 0.3s;
 }
 .box a:hover {
-    background: #007bff;
+    background: #21d19f;
 }
