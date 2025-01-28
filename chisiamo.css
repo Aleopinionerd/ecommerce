@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+body{
+
+    background-image: url(IMMAGINI/a.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
