@@ -14,14 +14,23 @@ header {
 }
 
 .container {
+    width: auto;
+    height:400px;
+    background-image: url('magazzino.jpg'); 
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
     width: 80%;
     margin: 0 auto;
+    border-radius: 40px;
     padding: 20px;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 32px;
     margin-bottom: 20px;
+  
 }
 
 .contact-info {
@@ -29,6 +38,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 30px;
+   
 }
 
 .contact-info div {
@@ -36,39 +46,93 @@ h1 {
     margin: 10px;
     padding: 20px;
     background-color: #21d19f;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 11px  #7293a0;
+    border-radius: 15px;
+    padding: 5px 20px;
 }
 
 .contact-info div h2 {
-    font-size: 1.5rem;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
 .contact-info div p {
-    font-size: 1rem;
+    font-size: 16px;
 }
+.contact-box {
+    background: #a0a4b8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.contact-box a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-box a:hover {
+    color: #21d19f;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+    .social-icons a:hover {
+        color: #7293a0;
+    }
+
 
 .form-container {
     background-color: #a0a4b8;
     padding: 20px;
     border-radius: 5px;
     border: 1px solid black;
+    box-shadow: 0 4px 6px black(0, 0, 0, 0.1), 0 1px 3px black (0, 0, 0, 0.08);
+    padding: 5px 20px;
 }
 
 .form-container label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-weight: bold;
+    padding: 5px 20px;
 }
 
 .form-container input,
 .form-container textarea {
     width: 100%;
-    padding: 10px;
+    
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    box-shadow: 0 2px 4px black(0, 0, 0, 0.1);
+   
 }
 
 .form-container button {
@@ -76,12 +140,23 @@ h1 {
     background-color: #7293a0;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px black(0, 0, 0, 0.1);
     cursor: pointer;
+    padding: 5px 20px;
 }
-
+.form-container input:focus,
+.form-container textarea:focus {
+    outline: none;
+    border-color: #7293a0;
+    box-shadow: 0 0 5px black(0, 115, 255, 0.5);
+    padding: 5px 20px;
+}
 .form-container button:hover {
+
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
     background-color: #21d19f;
+    padding: 5px 20px;
 }
 
 @media (max-width: 768px) {
