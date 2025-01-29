@@ -30,11 +30,17 @@
     background-color: #45b69c !important;
     transform: scale(0.95);
 }
+/* fine header */
+
+
+
+
 
 .cart-icon{
     color: white;
 }
 
+/* footer */
 .footer-container-bg{
     background-color: #d8ddef; /*#21d19f*/  
 }
