@@ -1,4 +1,7 @@
 * 
+.header-container-bg{
+    background-color: #d8ddef;
+}
 body {
     background-color: #d8ddef;
     display: flex;
@@ -10,7 +13,7 @@ body {
 
 .container {
     width: auto;
-    height:400px;
+    min-height: 400px;
     background-image: url('laptop.png'); 
     background-size:cover;
     background-position: center;
@@ -60,4 +63,13 @@ body {
 }
 .box a:hover {
     background: #21d19f;
+}
+.footer-container-bg{
+    background-color: #d8ddef; /*#21d19f*/  
+    position:relative;
+    bottom:0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px 0;
 }
