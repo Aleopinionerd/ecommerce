@@ -1,4 +1,6 @@
 .header-container-bg{
+    display:fixed;
+    width: auto;
     background-color: #d8ddef;
 }
 
@@ -103,12 +105,13 @@
 }
 
 .container{
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .row{
-    width: 100%;
+    margin:0;
 }
 
 .row-gap{
