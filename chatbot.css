@@ -5,7 +5,41 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+.header-container-bg{
+    display:fixed;
+    width: auto;
+    background-color: #7293a0;
+}
 
+.font-weight{
+    font-weight: 500;
+    color: #45b69c;;
+}
+
+.nav-link:hover{
+    color: #45b69c !important;
+}
+
+.dropdown-item:active{
+    background-color: #7293a0 !important;
+}
+
+.btn{
+    background-color: #21d19f;
+    border-color: #45b69c !important;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #45b69c;
+    color: white;
+}
+
+.btn:active{
+    background-color: #45b69c !important;
+    transform: scale(0.95);
+}
+/* fine header */
 
 
 .chat-container {
