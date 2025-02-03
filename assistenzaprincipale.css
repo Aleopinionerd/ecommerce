@@ -1,5 +1,39 @@
-* 
-body {
+
+.header-container-bg{
+    display:fixed;
+    width: auto;
+    background-color: #d8ddef;
+}
+
+.font-weight{
+    font-weight: 500;
+    color: #45b69c;;
+}
+
+.nav-link:hover{
+    color: #45b69c !important;
+}
+
+.dropdown-item:active{
+    background-color: #d8ddef !important;
+}
+
+.btn{
+    background-color: #21d19f;
+    border-color: #45b69c !important;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #45b69c;
+    color: white;
+}
+
+.btn:active{
+    background-color: #45b69c !important;
+    transform: scale(0.95);
+}
+.body {
     background-color: #d8ddef;
     display: flex;
     justify-content: center;
@@ -10,7 +44,7 @@ body {
 
 .container {
     width: auto;
-    height:400px;
+    min-height: 400px;
     background-image: url('laptop.png'); 
     background-size:cover;
     background-position: center;
@@ -60,4 +94,13 @@ body {
 }
 .box a:hover {
     background: #21d19f;
+}
+.footer-container-bg{
+    background-color: #d8ddef; /*#21d19f*/  
+    position:relative;
+    bottom:0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px 0;
 }
