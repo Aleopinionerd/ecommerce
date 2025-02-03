@@ -1,0 +1,209 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    margin: 20px;
+}
+
+.carrello h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tabella-carrello {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabella-carrello th, .tabella-carrello td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.tabella-carrello th {
+    background-color: #f2f2f2;
+}
+
+.prodotto img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.prodotto {
+    display: flex;
+    align-items: center;
+}
+
+.quantita {
+    width: 60px;
+}
+
+.rimuovi {
+    background-color: #21d19f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.rimuovi:hover {
+    background-color: darkred;
+}
+
+.totale {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.azioni-carrello {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.continua-acquisti {
+    background-color: #21d19f;
+    color: white;
+}
+
+
+.vai-pagamento {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #21d19f; /* Colore di sfondo verde */
+        color: white; /* Colore del testo bianco */
+        text-decoration: none; /* Rimuove la sottolineatura dal link */
+        border-radius: 5px; /* Rende gli angoli arrotondati */
+        text-align: center;
+        display: inline-block;
+    }
+    
+    .vai-pagamento:hover {
+        opacity: 0.8; /* Effetto hover: diminuisce l'opacità */
+    }
+    
+    
+    
+    .vai-pagamento:hover {
+        opacity: 0.8;
+    }
+    
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+.pagamento {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagamento h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tabella-carrello {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabella-carrello th, .tabella-carrello td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.tabella-carrello th {
+    background-color: #f2f2f2;
+}
+
+.totale {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button.paga {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #21d19f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.paga:hover {
+    background-color: #21d19f;
+}
