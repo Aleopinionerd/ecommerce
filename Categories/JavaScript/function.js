@@ -1,7 +1,9 @@
 const productContainer = document.getElementById('product-container');
+const categoryText = document.getElementById('category-text');
 
 //trova la categoria selezionata
 document.addEventListener("DOMContentLoaded", function () {
+  loadCategory("https://fakestoreapi.com/products/category/men's clothing");
   const categoryLinks = document.querySelectorAll('#dropdown .dropdown-item');
 
   categoryLinks.forEach(link => {
@@ -51,10 +53,14 @@ function displayProducts(product){
             <h5 class="card-title">${product.title}</h5>
             <p class="card-text">Anno: ${product.price}</p>            
           </div>
-          <a href="#" class="btn btn-primary btn-margin" onclick="showMovieDetails('${product.id}')">Dettagli</a>
+          <a href="#" class="btn btn-primary btn-margin" onclick="showDetails('${product.id}')">Dettagli</a>
         </div>
       </div>
     `;
     }).join('');
     productContainer.innerHTML = `<div class="row row-gap">${productCard}</div>`;
+}
+
+function showDetails(id) {
+    window.location.href = "../Details/Details.html?id=" + id;
 }

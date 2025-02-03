@@ -16,7 +16,7 @@
 }
 
 .btn{
-    background-color: #21d19f;
+    background-color: #21d19f !important;
     border-color: #45b69c !important;
     color: white;
 }
@@ -31,21 +31,28 @@
     transform: scale(0.95);
 }
 
+.cart-icon{
+    color: white;
+}
+/* fine header */
+
+
+/* footer */
 .footer-container-bg{
     background-color: #d8ddef; /*#21d19f*/  
 }
 
-.central-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 50px;
+.row{
+    margin:0;
 }
 
 .row-gap{
     row-gap: 25px;
+}
+
+.row-align{
+    justify-content: center;
+    align-items: center;
 }
 
 .centre-col{
@@ -53,28 +60,3 @@
     justify-content: center;
     align-items: center;
 }
-
-.card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 400px;
-}
-
-.card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.card img {
-    margin-top: 10px;
-    max-width: 60%;
-    max-height: 200px;
- }
-
- .btn-margin{
-    margin-bottom: 10px;
- }
