@@ -9,7 +9,6 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     
-
 }
 .header-container-bg{
     background-color: #d8ddef;
@@ -17,7 +16,7 @@ body{
 
 .font-weight{
     font-weight: 500;
-    color: #45b69c;;
+    color: #45b69c !important;
 }
 
 .nav-link:hover{
@@ -29,19 +28,22 @@ body{
 }
 
 .btn{
-    background-color: #21d19f;
+    background-color: #21d19f !important;
     border-color: #45b69c !important;
-    color: white;
+    color: white !important;
 }
 
 .btn:hover{
-    background-color: #45b69c;
-    color: white;
+    background-color: #45b69c !important;
+    color: white !important;
 }
 
 .btn:active{
     background-color: #45b69c !important;
     transform: scale(0.95);
+}
+.cart-icon{
+    color: white;
 }
 /* fine header */
 .custom-col{
@@ -53,6 +55,4 @@ h1{
 }
 .footer-container-bg{
     background-color: #d8ddef; /*#21d19f*/  
-    
 }
-
