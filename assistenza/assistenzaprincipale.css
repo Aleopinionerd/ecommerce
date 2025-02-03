@@ -3,10 +3,14 @@
     font-weight: 500;
     color: #45b69c;;
 }
+.nav-link {
+    color: #45b69c !important;
+}
 
 .nav-link:hover{
     color: #45b69c !important;
 }
+
 
 .dropdown-item:active{
     background-color: #d8ddef !important;
@@ -19,7 +23,7 @@
 }
 
 .btn:hover{
-    background-color: #45b69c;
+    background-color: #45b69c !important;
     color: white;
 }
 
