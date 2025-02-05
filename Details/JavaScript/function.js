@@ -32,7 +32,13 @@ function displayProduct(product){
       <div class="col-md-12 col-lg-6">
         <p>${product.description}</p>
         <p>Valutazione: ${product.rating.rate} <i class="fas fa-star"></i></p>
+        <button onclick="addToCart()" class="btn btn-primary">Aggiungi al carrello</button>
       </div>
     `;
     ProductContainer.innerHTML += `${productCard}`;
+}
+
+function addToCart(){
+  id = getQueryParam("id");
+  window.location.href = "../carrello.html?id=" + id;
 }
