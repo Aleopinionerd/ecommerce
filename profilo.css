@@ -1,3 +1,7 @@
 .row{
     margin-bottom: 100px;
+    text-align: center;
+}
+.fa-solid{
+    color: #45b69c !important;
 }
