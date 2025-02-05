@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4 !important;
 }
 
 .header-container-bg{
@@ -163,7 +163,7 @@ button:hover {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 .pagamento h2 {
@@ -180,7 +180,7 @@ button:hover {
 .tabella-carrello th, .tabella-carrello td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
 }
 
 .tabella-carrello th {
