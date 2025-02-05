@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
   }
-body{
+#contenitore{
 
     background-image: url(IMMAGINI/a2.jpg);
     background-size: 100%;
