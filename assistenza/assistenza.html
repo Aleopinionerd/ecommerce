@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="Style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+
+  </head>
 
 
 
@@ -130,5 +131,82 @@
       </div>
     </footer>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form"); // Seleziona il modulo di contatto
+        const emailInput = document.getElementById("email");
+        const nameInput = document.getElementById("name");
+        const messageInput = document.getElementById("message");
+
+        // Creazione dinamica degli errori se non esistono
+        function createErrorElement(id) {
+            let errorElement = document.getElementById(id);
+            if (!errorElement) {
+                errorElement = document.createElement("p");
+                errorElement.id = id;
+                errorElement.style.color = "red";
+                errorElement.style.fontSize = "14px";
+                errorElement.style.marginTop = "5px";
+            }
+            return errorElement;
+        }
+
+        const emailError = createErrorElement("email-error");
+        emailInput.insertAdjacentElement("afterend", emailError);
+
+        const nameError = createErrorElement("name-error");
+        nameInput.insertAdjacentElement("afterend", nameError);
+
+        const messageError = createErrorElement("message-error");
+        messageInput.insertAdjacentElement("afterend", messageError);
+
+        function emailValida(email) {
+            return email.includes("@") && email.includes(".");
+        }
+
+        function campoValido(input) {
+            return input.value.trim() !== "";
+        }
+
+        // Validazione in tempo reale
+        emailInput.addEventListener("input", function () {
+            emailError.textContent = emailValida(emailInput.value) ? "" : "Inserisci un'email valida.";
+        });
+
+        nameInput.addEventListener("input", function () {
+            nameError.textContent = campoValido(nameInput) ? "" : "Il nome è obbligatorio.";
+        });
+
+        messageInput.addEventListener("input", function () {
+            messageError.textContent = campoValido(messageInput) ? "" : "Il messaggio non può essere vuoto.";
+        });
+
+        // Controllo finale prima dell'invio del form
+        form.addEventListener("submit", function (event) {
+            let isValid = true;
+
+            if (!campoValido(nameInput)) {
+                nameError.textContent = "Il nome è obbligatorio.";
+                isValid = false;
+            }
+
+            if (!emailValida(emailInput.value)) {
+                emailError.textContent = "Inserisci un'email valida.";
+                isValid = false;
+            }
+
+            if (!campoValido(messageInput)) {
+                messageError.textContent = "Il messaggio non può essere vuoto.";
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Impedisce l'invio del form se ci sono errori
+            }
+        });
+    });
+</script>
+
+
 </body>
 </html>
