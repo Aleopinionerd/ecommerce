@@ -3,9 +3,7 @@
     font-weight: 500;
     color: #45b69c !important;
 }
-.nav-link {
-    color: #45b69c !important;
-}
+
 
 .nav-link:hover{
     color: #45b69c !important;
@@ -29,7 +27,26 @@
 .btn:active{
     background-color: #45b69c !important;
     transform: scale(0.95);
+    
+    
 }
+.nav-link * {
+    color: #45b69c !important;
+}
+
+.nav-link svg, 
+.nav-link i {
+    color: #45b69c !important;
+}
+.navbar .nav-link svg, 
+.navbar .nav-link i {
+    color: #45b69c !important;
+}
+.nav-link svg {
+    fill: #45b69c !important;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
