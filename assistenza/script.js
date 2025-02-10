@@ -2,7 +2,7 @@ function sendMessage() {
     let userInput = document.getElementById("user-input").value;
     let chatBox = document.getElementById("chat-box");
 
-    if (userInput.trim() === "") return; 
+    if (userInput.trim() === "") return; // Non inviare messaggi vuoti
 
   
     let userMessage = `<div class="message user">${userInput}</div>`;

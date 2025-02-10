@@ -1,4 +1,62 @@
 
+.font-weight{
+    font-weight: 500;
+    color: #45b69c !important;
+}
+.header-container-bg .btn {
+    background-color: #45b69c !important;
+    border-color: #45b69c !important;
+    color: white !important;
+}
+
+.header-container-bg .btn:hover {
+    background-color: #21d19f !important;
+    color: white !important;
+}
+
+.nav-link * {
+    color: #45b69c !important;
+}
+.bi {
+    color: #45b69c !important;
+}
+.nav-link svg, 
+.nav-link i {
+    color: #45b69c !important;
+}
+.navbar .nav-link svg, 
+.navbar .nav-link i {
+    color: #45b69c !important;
+}
+.nav-link svg {
+    fill: #45b69c !important;
+}
+.nav-link:hover{
+    color: #45b69c !important;
+}
+
+.dropdown-item:active{
+    background-color: #d8ddef !important;
+}
+
+.btn{
+    background-color: #21d19f;
+    border-color: #45b69c !important;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #45b69c !important;
+    color: white;
+}
+
+.btn:active{
+    background-color: #45b69c !important;
+    transform: scale(0.95);
+    
+    
+}
+
 
 body {
     font-family: Arial, sans-serif;
@@ -87,6 +145,21 @@ body {
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 
+.form-container input#name,
+.form-container input#email {
+    width: 60%; 
+    margin-bottom: 10px; 
+}
+.privacy-policy {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.privacy-policy input {
+    margin-right: 5px;
+}
+
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -97,6 +170,7 @@ body {
         width: 100%;
     }
 }
+
 
 
 .footer-container-bg {

@@ -19,7 +19,8 @@
 }
 
 .btn:hover{
-    background-color: #45b69c;
+
+    background-color: #45b69c !important;
     color: white;
 }
 
@@ -27,57 +28,51 @@
     background-color: #45b69c !important;
     transform: scale(0.95);
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #a0a4b8;
-}
-
 
 
 body {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    min-height: 250vh;
-    background-color: #a0a4b8;
-    margin: 100%;
-    padding-top: 60px;  
-    padding-bottom: 80px; 
+    min-height: 100vh;
+    background-color: #d8ddef;
+    margin:0;
+    overflow-x: hidden ;
 }
 
 .header-container-bg {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
     background-color: #d8ddef;
-    padding: 10px 0;
     text-align: center;
-
+    padding: 10px 0;
+    z-index: 15;
 }
-
 .chat-wrapper {
-    flex-grow: 1;
     display: flex;
-    position: relative;
-    align-items: center;
+    flex-grow: 1;
     justify-content: center;
+    align-items: flex-start;
+    margin-top: 300px;
+    margin-bottom: 200px;
     width: 100%;
-    margin-bottom: 100px; 
+    max-width: 450px; /* Limita la larghezza massima */
 }
-
 
 
 .chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px; 
+    margin-bottom: 80px;
     width: 350px;
-    height: 600px;
+    height: 100%;
     background: #7293a0;
-    position: relative;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px black(0, 0, 0, 0.2);
     display: flex;
     border: solid black;
     flex-direction: column;
@@ -98,14 +93,15 @@ body {
     gap: 10px;
 }
 
-
 .chat-box {
-    flex: 1;
+    flex-grow: 1;
     padding: 15px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    max-width: auto;
 }
+
 
 .message {
     max-width: 75%;
@@ -116,7 +112,7 @@ body {
 }
 
 .bot {
-    background: #45b69c;
+    background:#45b69c;
     color: white;
     align-self: flex-start;
 }
@@ -149,7 +145,7 @@ body {
     padding: 10px 15px;
     margin-left: 10px;
     border-radius: 5px;
-    border: none;
+    border:none;
     cursor: pointer;
 }
 .footer-container-bg {
@@ -159,4 +155,5 @@ body {
     background-color: #d8ddef;
     text-align: center;
     padding: 20px 0;
+    z-index: 10;
 }
