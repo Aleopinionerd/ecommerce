@@ -3,6 +3,17 @@
     font-weight: 500;
     color: #45b69c;;
 }
+.header-container-bg .btn {
+    background-color: #45b69c !important;
+    border-color: #45b69c !important;
+    color: white !important;
+}
+
+.header-container-bg .btn:hover {
+    background-color: #21d19f !important;
+    color: white !important;
+}
+
 .nav-link * {
     color: #45b69c !important;
 }
@@ -69,8 +80,8 @@ body {
     flex-grow: 1;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 300px;
+    margin-bottom: 200px;
     width: 100%;
     max-width: 450px; /* Limita la larghezza massima */
 }

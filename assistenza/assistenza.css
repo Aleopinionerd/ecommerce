@@ -3,8 +3,34 @@
     font-weight: 500;
     color: #45b69c !important;
 }
+.header-container-bg .btn {
+    background-color: #45b69c !important;
+    border-color: #45b69c !important;
+    color: white !important;
+}
 
+.header-container-bg .btn:hover {
+    background-color: #21d19f !important;
+    color: white !important;
+}
 
+.nav-link * {
+    color: #45b69c !important;
+}
+.bi {
+    color: #45b69c !important;
+}
+.nav-link svg, 
+.nav-link i {
+    color: #45b69c !important;
+}
+.navbar .nav-link svg, 
+.navbar .nav-link i {
+    color: #45b69c !important;
+}
+.nav-link svg {
+    fill: #45b69c !important;
+}
 .nav-link:hover{
     color: #45b69c !important;
 }
@@ -29,21 +55,6 @@
     transform: scale(0.95);
     
     
-}
-.nav-link * {
-    color: #45b69c !important;
-}
-
-.nav-link svg, 
-.nav-link i {
-    color: #45b69c !important;
-}
-.navbar .nav-link svg, 
-.navbar .nav-link i {
-    color: #45b69c !important;
-}
-.nav-link svg {
-    fill: #45b69c !important;
 }
 
 
@@ -159,6 +170,7 @@ body {
         width: 100%;
     }
 }
+
 
 
 .footer-container-bg {
