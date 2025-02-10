@@ -5,3 +5,88 @@
 .fa-solid{
     color: #45b69c !important;
 }
+.header-container-bg{
+    display:fixed;
+    width: auto;
+    background-color: #d8ddef !important;
+}
+
+.font-weight{
+    font-weight: 500;
+    color: #45b69c !important;
+}
+
+.nav-link:hover{
+    color: #45b69c !important;
+}
+
+.dropdown-item:active{
+    background-color: #d8ddef !important;
+}
+
+.btn{
+    background-color: #21d19f !important;
+    border-color: #45b69c !important;
+    color: white !important;
+}
+
+.btn:hover{
+    background-color: #45b69c !important;
+    color: white !important;
+}
+
+.btn:active{
+    background-color: #45b69c !important;
+    transform: scale(0.95);
+}
+/* fine header */
+.cart-icon{
+    color: white !important;
+}
+
+/* footer */
+.footer-container-bg{
+    background-color: #d8ddef; /*#21d19f*/  
+}
+#footerrow{
+    text-align: inherit;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+.custom-container{
+    max-width: 69% !important;/* Modifica la larghezza del container */
+            border-width: 5px; /* Modifica la larghezza del bordo */
+            border-style: solid;
+            border-color: black;
+}
+
+.labels {
+    font-size: 11px
+}

@@ -13,50 +13,136 @@
 </head>
 
 <body>
-    
-  <div class="container mt-5">
-    <h1 style="color:rgb(0, 0, 0)">IL MIO ACCOUNT</h1>
-    <div class="row">
+  <!-- header -->
+  <div class="container-fluid header-container-bg">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+      </div>
 
-      <div class="col p-4 mx-2 text-black rounded border custom-col">
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="Home.html" class="nav-link px-2 link-secondary"><span class="font-weight">Home</span></a></li>
+        <li><a href="" class="nav-link px-2 link-secondary">Favourites</a></li>
+        <li><a href="" class="nav-link px-2 link-secondary">FAQs</a></li>
+        <li><a href="" class="nav-link px-2 link-secondary">About</a></li>
+        <li><a href="../Categories/Categories.html" class="nav-link px-2 link-secondary">Categories</a></li>
+      </ul>
 
-        <h4>I miei ordini</h4>
+      <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+        <button type="button" class="btn btn-outline-primary me-2">Login</button>
+        <button type="button" class="btn btn-primary">Sign-up</button>
+      </div>
+    </header>
+  </div>
+  <!-- fine header -->
+  <h1 style="text-align: center;">IL MIO ACCOUNT</h1>
+  <div class="container custom-container border rounded bg-white mt-5 mb-5">
+   
+    <div class="row justify-content-center">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edo Garu</span><span class="text-black-50">edogaru@gmail.com</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Nome</label><input type="text" class="form-control" placeholder="first name" value=""></div>
+                    <div class="col-md-6"><label class="labels">Cognome</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Numero di telefono</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
+                    <div class="col-md-12"><label class="labels">Indirizzo</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
+                    <div class="col-md-12"><label class="labels">codice postale</label><input type="text" class="form-control" placeholder="enter post code" value=""></div>
+                    <div class="col-md-12"><label class="labels">Paese</label><input type="text" class="form-control" placeholder="enter state" value=""></div>
+                    <div class="col-md-12"><label class="labels">Citta</label><input type="text" class="form-control" placeholder="enter city" value=""></div>
+                    <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
+                </div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+            </div>
+        </div>
+</div>
+</div>
+    <div class="row justify-content-center">
+
+      <div class="col-4 p-4 mx-2 text-center text-black rounded border custom-col">
+
+        <h5>I miei ordini</h5>
         <p><i class="fa-solid fa-truck-fast fa-5x"></i></p>
         <p>Traccia,restituisci o acquista nuovamente degli articoli</p>
       </div>
-      <div class="col p-4 mx-2 text-black border custom-col">
+      <div class="col-4 p-4 mx-2 text-center text-black rounded border custom-col">
 
-        <h4>Accesso e impostazioni di sicurezza</h4>
-        <p><i class="fa-solid fa-shield-halved fa-5x"></i></p>
-        <p>Modifica il login,il nome e il numero di cellulare</p>
-      </div>
-      <div class="col p-4 mx-2 text-black rounded border custom-col">
-
-        <h4>contattaci</h4>
+        <h5>contattaci</h5>
         <p><i class="fa-solid fa-phone-volume fa-5x"></i></p>
         <p>Contatta il nostro servizio clienti tramite telofono o chat</p>
       </div>
     </div>
-    <div class="row">
-
-        <div class="col p-4 mx-2 text-black rounded border custom-col">
-          
-          <h4>Indirizzi</h4>
-          <p><i class="fa-solid fa-address-book fa-5x"></i></p>
-          <p>Modifica indirizzi e preferenze di consegna per gli ordini e i regali</p>
-        </div>
-        <div class="col p-4 mx-2 text-black rounded border custom-col">
   
-          <h4>Buoni Regalo e Ricarica</h4>
-          <p><i class="fa-solid fa-gift fa-5x"></i></p>
-          <p>Aggiungi un Buono Regalo,visualizza il saldo o ricarica il tuo account</p>
+      <!-- inizio footer -->
+    <div class="container-fluid footer-container-bg">
+      <footer class="py-5">
+        <div class="row" id="footerrow">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="col p-4 mx-2 text-black rounded border custom-col">
-  
-          <h4>Centro Comunicazioni</h4>
-          <p><i class="fa-solid fa-envelope-open fa-5x"></i></p>
-          <p>Vedi i messaggi da (nome azienda) e dai Venditori Terzi</p>
+    
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+          </ul>
         </div>
-      </div>
+      </footer>
+    </div>
+  <!-- fine footer -->
 </body>
 </html>
