@@ -255,3 +255,7 @@ button.paga {
 button.paga:hover {
     background-color: #21d19f;
 }
+
+.ct-vh{
+    min-height: 50vh;
+}

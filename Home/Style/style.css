@@ -54,12 +54,23 @@
 .main-home-img{
     width: 100%;
     border-radius: 6px;
+    transition: transform 0.5s ease;
+}
+
+.main-home-img:hover{
+    transform: scale(1.02);
 }
 
 .second-home-img{
     width: 100%;
     border-radius: 6px;
+    transition: transform 0.5s ease;
 }
+
+.second-home-img:hover{
+    transform: scale(1.03);
+}
+
 
 .text-container{
     width: 100%;

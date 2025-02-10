@@ -54,6 +54,7 @@ function displayProducts(product){
             <p class="card-text">Prezzo: ${product.price} €</p>            
           </div>
           <a href="#" class="btn btn-primary btn-margin" onclick="showDetails('${product.id}')">Dettagli</a>
+          <button onclick="addToFavourites(this, '${product.id}')" class="btn btn-primary fav-btn"><i class="fa-regular fa-heart fav-icon prev-fav-icon"></i></button>
         </div>
       </div>
     `;
@@ -63,4 +64,9 @@ function displayProducts(product){
 
 function showDetails(id) {
     window.location.href = "../Details/Details.html?id=" + id;
+}
+
+function addToFavourites(x, id){
+  x.innerHTML = "<i class='fa-solid fa-heart fav-icon after-fav-icon'></i>";
+  window.location.href = "../Favourites/Favourites.html?id=" + id;
 }
