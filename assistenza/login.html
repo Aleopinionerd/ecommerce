@@ -25,7 +25,7 @@
         <div class="tab-content">
           <!-- Login Form -->
           <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-            <form>
+            <form id="loginForm">
               <div class="text-center mb-3">
                 <p>Entra con:</p>
                 <button type="button" class="btn btn-link btn-floating mx-1">
@@ -45,14 +45,14 @@
               <p class="text-center">oppure:</p>
               
               <div class="form-outline mb-4">
-                <label class="form-label" for="loginName">Email o username</label>
-                <input type="email" id="loginName" class="form-control" />
+                <label class="form-label" for="loginName">Username</label>
+                <input type="text" id="username" class="form-control" />
                 
               </div>
               
               <div class="form-outline mb-4">
                 <label class="form-label" for="loginPassword">Password</label>
-                <input type="password" id="loginPassword" class="form-control" />
+                <input type="password" id="password" class="form-control" />
                 
               </div>
               
@@ -78,8 +78,54 @@
           </div>
         
         <!-- Pills content -->
-      </div>
+        </div>
+      <script>
+        // Funzione di utilità per stampare l'output in una sezione dedicata
+        function printOutput(data) {
+          const output = document.getElementById("output");
+          output.textContent = JSON.stringify(data, null, 2);
+        }
     
+        // Funzione per effettuare il login
+        function login(username, password) {
+          fetch('http://localhost:8080/api/login', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ username, password })
+          })
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Login fallito');
+              }
+              return response.json();
+          })
+          .then(data => {
+              console.log('Login effettuato:', data);
+             // printOutput(data);
+              // Salva il token nel localStorage
+              if(data.token) {
+                localStorage.setItem("authToken", data.token);
+                // Mostra il pulsante Logout e nasconde il form di login
+              //  document.getElementById("logoutButton").style.display = "block";
+                document.getElementById("loginForm").style.display = "none";
+                window.location.href="../Home/Home.html";
+              }
+          })
+          .catch(error => {
+              console.error('Errore nel login:', error);
+              //printOutput({ error: error.message });
+          });
+        }
+        // Gestione del form di login
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      login(username, password);
+    });
+        </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
     
     </html>
