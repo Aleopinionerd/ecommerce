@@ -28,7 +28,7 @@ function displayProducts(product, category){
             <h5 class="card-title">${product.title}</h5>
             <p class="card-text">Anno: ${product.price}</p>            
           </div>
-          <a href="#" class="btn btn-primary btn-margin" onclick="showMovieDetails('${product.id}')">Dettagli</a>
+          <a href="#" class="btn btn-primary btn-margin" onclick="showDetails('${product.id}')">Dettagli</a>
         </div>
       </div>
     `;
@@ -64,7 +64,7 @@ function displayElectronicsProducts(product, id){
             <h5 class="card-title">${product.title}</h5>
             <p class="card-text">Anno: ${product.price}</p>            
           </div>
-          <a href="#" class="btn btn-primary btn-margin" onclick="showMovieDetails('${product.id}')">Dettagli</a>
+          <a href="#" class="btn btn-primary btn-margin" onclick="showDetails('${product.id}')">Dettagli</a>
         </div>
       </div>
     `;
@@ -89,4 +89,8 @@ function loadCategories(){
     loadElectronicsCategory(12);
     loadElectronicsCategory(13);
     loadElectronicsCategory(14);
+}
+
+function showDetails(id) {
+  window.location.href = "../Details/Details.html?id=" + id;
 }

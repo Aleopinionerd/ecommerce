@@ -1,5 +1,5 @@
 .header-container-bg{
-    background-color: #d8ddef;
+    background-color: #d8ddef !important;
 }
 
 .font-weight{
@@ -15,20 +15,53 @@
     background-color: #d8ddef !important;
 }
 
-.btn{
+.btn-outline-primary{
     background-color: #21d19f !important;
     border-color: #45b69c !important;
-    color: white;
+    color: white !important;
 }
 
-.btn:hover{
-    background-color: #45b69c;
-    color: white;
+.btn-outline-primary:hover{
+    background-color: #45b69c !important;
+    color: white !important;
 }
 
-.btn:active{
+.btn-outline-primary:active{
     background-color: #45b69c !important;
     transform: scale(0.95);
+}
+
+.btn-primary{
+    background-color: #21d19f !important;
+    border-color: #45b69c !important;
+    color: white !important;
+}
+
+.btn-primary:hover{
+    background-color: #45b69c !important;
+    color: white !important;
+}
+
+.btn-primary:active{
+    background-color: #45b69c !important;
+    transform: scale(0.95);
+}
+
+.btn-back{
+    background-color: #b80000 !important;
+    border-color: #000000 !important;
+    color: white;
+}
+
+.btn-back:hover{
+    background-color: #9e0000 !important;
+    color: white !important;
+}
+
+.btn-back:active{
+    background-color: #9e0000  !important;
+    transform: scale(0.95);
+    color: white !important;
 }
 
 .cart-icon{
