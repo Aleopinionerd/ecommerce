@@ -1,0 +1,83 @@
+
+.font-weight{
+    font-weight: 500;
+    color: #45b69c !important;
+}
+.header-container-bg .btn {
+    background-color: #45b69c !important;
+    border-color: #45b69c !important;
+    color: white !important;
+}
+
+.header-container-bg .btn:hover {
+    background-color: #21d19f !important;
+    color: white !important;
+}
+a[href="register.html"] {
+    color: black !important;
+}
+.login-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+  .form-outline {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-outline label {
+    margin-bottom: 5px; /* Distanza tra la label e l'input */
+    font-weight: bold;
+    font-size:14px;
+}
+
+.form-outline input {
+    padding: 10px;
+    border-radius: 4px;
+
+}
+
+.form-outline .form-control {
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 600px;
+  }
+  .btn-primary {
+    background-color: #21d19f ;
+    border-color: #21d19f ;
+  }
+  .btn-primary:hover {
+    background-color: #17c292;
+    border-color: #17c292;
+}
+  
+  .btn-link {
+    color: #21d19f ;
+  }
+  
+  .btn-link:hover {
+    color: #21d19f ;
+  }
+  .nav-pills .nav-link {
+    border-radius: 0;
+    font-weight: bold;
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: #21d19f ;
+  }
+  
+  

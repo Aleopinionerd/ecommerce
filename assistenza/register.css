@@ -1,0 +1,87 @@
+
+
+.form-outline input {
+    border-radius: 5px;
+}
+
+.font-weight{
+    font-weight: 500;
+    color: #45b69c !important;
+}
+
+
+.header-title {
+    background-color: #21d19f; /* Colore verde */
+    color: white; /* Colore del testo */
+    padding: 15px; /* Distanza tra il testo e i bordi */
+    border-radius: 0px; /* Angoli arrotondati */
+    font-weight: 500; /* Grassetto per il testo */
+    margin: 0; /* Rimuove i margini di default */
+}
+
+
+body {
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size:14px;
+}
+.card {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.form-check-label {
+    margin-left: 5px;
+    font-weight: bold;
+    font-size:14px;
+}
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.social-buttons {
+    text-align: center;
+}
+.social-buttons button {
+    margin: 5px;
+}
+.social-buttons i {
+    font-size: 24px;
+    color: #45b69c !important; 
+    
+}
+
+.nav-pills .nav-link {
+    border-radius: 0;
+    font-weight: bold;
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: #21d19f ;
+  }
+.social-buttons i:hover {
+    color: #21d19f !important; /* Verde più chiaro al passaggio del mouse */
+}
+
+.btn-register, .btn-login {
+    background-color: #45b69c !important;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    margin-top: 10px;
+}
+
+.btn-register:hover, .btn-login:hover {
+    background-color: #21d19f !important;
+    color: white !important;
+}
