@@ -24,17 +24,18 @@
           </div>
   
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="Home.html" class="nav-link px-2 link-secondary"><span class="font-weight">Home</span></a></li>
+            <li><a href="../Home/Home.html" class="nav-link px-2 link-secondary"><span class="font-weight">Home</span></a></li>
             <li><a href="../Categories/Categories.html" class="nav-link px-2 link-secondary">Favourites</a></li>
             <li><a href="../Faq.html" class="nav-link px-2 link-secondary">FAQs</a></li>
             <li><a href="../chisiamo.css" class="nav-link px-2 link-secondary">About</a></li>
             <li><a href="../Categories/Categories.html" class="nav-link px-2 link-secondary">Categories</a></li>
+            <li><a href="assistenza.html" class="nav-link px-2 link-secondary">Assistance</a></li>
           </ul>
   
           <div class="col-md-3 text-end">
             <button type="button" class="btn btn-outline-primary me-2"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
+            <button id="login" type="button" onclick="window.location.href='../assistenza/login.html'" class="btn btn-outline-primary me-2">Login</button>
+            <button id="signup" type="button" onclick="window.location.href='../assistenza/register.html'" class="btn btn-primary">Sign-up</button>
           </div>
         </header>
       </div>
@@ -209,6 +210,73 @@
             }
         });
     });
+
+
+let logoutButton = document.getElementById("login");
+let signUpButton = document.getElementById("signup");
+token = localStorage.getItem("authToken");
+console.log(token);
+
+document.addEventListener("DOMContentLoaded", function (){
+  if(token != null){
+    logoutButton.innerHTML="Logout";
+    logoutButton.onclick="";
+    signUpButton.innerHTML="<i class='fa-solid fa-user'></i>";
+  }
+});
+
+window.onload = function (){
+  loadCategories();
+  localStorage.getItem("authToken");
+}
+
+logoutButton.addEventListener("click", function(){
+  if(token != null){
+    if(logoutButton.innerHTML=="Logout"){
+      logout();
+    }
+  }
+});
+
+signUpButton.addEventListener("click", function(){
+  if(token != null){
+   window.location.href='../profilo.html';
+  }
+});
+
+function logout() {
+  // Recupera il token dal localStorage
+  const token = localStorage.getItem("authToken");
+  if (!token) {
+    console.error("Nessun token trovato nel localStorage");
+    return;
+  }
+  
+  fetch('http://localhost:8080/api/logout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token
+      }
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Logout fallito');
+      }
+      return response.json();
+  })
+  .then(data => {
+      console.log('Logout effettuato:', data);
+      //printOutput(data);
+      // Rimuove il token dal localStorage
+      localStorage.removeItem("authToken");
+      window.location.href="../Home/Home.html";
+  })
+  .catch(error => {
+      console.error('Errore durante il logout:', error);
+      //printOutput({ error: error.message });
+  });
+}
 </script>
 
 

@@ -10,6 +10,7 @@
   </head>
   <body onload="loadCategory()">
     
+    <!-- header -->
     <div class="container-fluid header-container-bg">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <div class="col-md-2 mb-2 mb-md-0">
@@ -21,25 +22,27 @@
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="../Home/Home.html" class="nav-link px-2 link-secondary"><span class="font-weight">Home</span></a></li>
             <li><a href="../Favourites/Favourites.html" class="nav-link px-2 link-secondary">Favourites</a></li>
-            <li><a href="" class="nav-link px-2 link-secondary">FAQs</a></li>
-            <li><a href="" class="nav-link px-2 link-secondary">About</a></li>
+            <li><a href="../Faq.html" class="nav-link px-2 link-secondary">FAQs</a></li>
+            <li><a href="../chisiamo.html" class="nav-link px-2 link-secondary">About</a></li>
             <li><a href="../Categories/Categories.html" class="nav-link px-2 link-secondary">Categories</a></li>
+            <li><a href="../assistenza/assistenza.html" class="nav-link px-2 link-secondary">Assistance</a></li>
           </ul>
   
           <div class="col-md-4 text-end">
             <button onclick="window.location.href='../carrello.html'" type="button" class="btn btn-outline-primary me-2"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
+            <button id="login" type="button" onclick="window.location.href='../assistenza/login.html'" class="btn btn-outline-primary me-2">Login</button>
+            <button id="signup" type="button" onclick="window.location.href='../assistenza/register.html'" class="btn btn-primary">Sign-up</button>
           </div>
         </header>
       </div>
+      <!-- fine header -->
 
     <div class="central-container">
 
         <h1 id="category-text" class="text"></h1>
         <div class="container">
             <div id="product-container" class="row row-gap row-align">
-
+              
             </div>
 
         </div>
@@ -48,6 +51,8 @@
 
     <br><br><br><br><br>
 
+
+    <!-- footer -->
     <div class="container-fluid footer-container-bg">
         <footer class="py-5">
           <div class="row">
@@ -107,6 +112,7 @@
           </div>
         </footer>
       </div>
+      <!-- fine footer -->
   
     <script src="JavaScript/function.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
