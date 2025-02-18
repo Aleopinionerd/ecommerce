@@ -16,7 +16,7 @@
         <h3 class="text-center mb-4 header-title">Registrati</h3>
 
 
-        <form>
+        <form id="addUserForm">
             <div class="social-buttons mb-4">
                 <p>Registrati con:</p>
                 <button type="button" class="btn btn-link btn-floating mx-1" data-mdb-ripple-init>
@@ -38,37 +38,37 @@
             <!-- Nome input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerName">Nome</label>
-                <input type="nome" id="registerName" class="form-control" required />
+                <input type="nome" id="newName" class="form-control" required />
                
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerPartitaIva">Partita Iva</label>
-                <input type="partitaIva" id="registerPartitaIva" class="form-control"/>
+                <input type="partitaIva" id="newPartitaIva" class="form-control"/>
             </div>
 
             <!-- Username input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerUsername">Nome utente</label>
-                <input type="username" id="registerUsername" class="form-control" required />
+                <input type="username" id="newUsername" class="form-control" required />
                 
             </div>
 
             <!-- Email input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerEmail">Email</label>
-                <input type="email" id="registerEmail" class="form-control" required />
+                <input type="email" id="newEmail" class="form-control" required />
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerPassword">Password</label>
-                <input type="password" id="registerPassword" class="form-control" required />
+                <input type="password" id="newPassword" class="form-control" required />
             </div>
 
             <!-- Repeat Password input -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerRepeatPassword">Ripeti password</label>
-                <input type="password" id="registerRepeatPassword" class="form-control" required />
+                <input type="password" id="newRepeatePassword" class="form-control" required />
             </div>
 
             <!-- Checkbox -->
@@ -87,6 +87,50 @@
             <p>Hai già un account? <a href="login.html" class="btn-login">Accedi</a></p>
         </div>
     </div>
+    <script>
+        function getAuthHeaders() {
+      const token = localStorage.getItem("authToken");
+      return token ? { 'Authorization': 'Bearer ' + token } : {};
+    }
+
+        function addUser(newUser) {
+      fetch('http://localhost:8080/utente/addUser', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+            //...getAuthHeaders()
+          },
+          body: JSON.stringify(newUser)
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Non autorizzato o errore durante l\'aggiunta dell\'utente');
+          }
+          return response.json();
+      })
+      .then(data => {
+          console.log('Risposta addUser:', data);
+          printOutput(data);
+      })
+      .catch(error => {
+          console.error('Errore nell\'aggiunta dell\'utente:', error);
+          printOutput({ error: error.message });
+      });
+    }
+
+    document.getElementById('addUserForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const newUser = {
+        nome: document.getElementById('newName').value,
+        email: document.getElementById('newEmail').value,
+        username: document.getElementById('newUsername').value,
+        password: document.getElementById('newPassword').value,
+        partitaIva: document.getElementById("newPartitaIva").value
+      };
+      addUser(newUser);
+      window.location.href="login.html";
+    });
+    </script>
 
     <!-- MDB Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@5.1.0/js/mdb.min.js"></script>
