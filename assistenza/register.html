@@ -110,11 +110,12 @@
       })
       .then(data => {
           console.log('Risposta addUser:', data);
-          printOutput(data);
+          window.location.href="login.html";
+          //printOutput(data);
       })
       .catch(error => {
           console.error('Errore nell\'aggiunta dell\'utente:', error);
-          printOutput({ error: error.message });
+          //printOutput({ error: error.message });
       });
     }
 
@@ -128,7 +129,6 @@
         partitaIva: document.getElementById("newPartitaIva").value
       };
       addUser(newUser);
-      window.location.href="login.html";
     });
     </script>
 

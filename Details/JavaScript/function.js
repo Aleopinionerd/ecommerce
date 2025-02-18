@@ -1,4 +1,69 @@
 const ProductContainer = document.getElementById("product-container");
+let logoutButton = document.getElementById("login");
+let signUpButton = document.getElementById("signup");
+token = localStorage.getItem("authToken");
+console.log(token);
+
+document.addEventListener("DOMContentLoaded", function (){
+  if(token != null){
+    logoutButton.innerHTML="Logout";
+    logoutButton.onclick="";
+    signUpButton.innerHTML="<i class='fa-solid fa-user'></i>";
+  }
+});
+
+window.onload = function (){
+  loadCategories();
+  localStorage.getItem("authToken");
+}
+
+logoutButton.addEventListener("click", function(){
+  if(token != null){
+    if(logoutButton.innerHTML=="Logout"){
+      logout();
+    }
+  }
+});
+
+signUpButton.addEventListener("click", function(){
+  if(token != null){
+   window.location.href='../profilo.html';
+  }
+});
+
+function logout() {
+  // Recupera il token dal localStorage
+  const token = localStorage.getItem("authToken");
+  if (!token) {
+    console.error("Nessun token trovato nel localStorage");
+    return;
+  }
+  
+  fetch('http://localhost:8080/api/logout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token
+      }
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Logout fallito');
+      }
+      return response.json();
+  })
+  .then(data => {
+      console.log('Logout effettuato:', data);
+      //printOutput(data);
+      // Rimuove il token dal localStorage
+      localStorage.removeItem("authToken");
+      window.location.href="../Home/Home.html";
+  })
+  .catch(error => {
+      console.error('Errore durante il logout:', error);
+      //printOutput({ error: error.message });
+  });
+}
 
 function getQueryParam(id) {
     const params = new URLSearchParams(window.location.search); 
