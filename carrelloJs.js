@@ -74,8 +74,14 @@ function getQueryParam(id) {
 }
 
 function loadProduct() {
+    let url="";
     id = getQueryParam("id");
-    let url = "https://fakestoreapi.com/products/" + id;
+    if(id!=null){
+        url = "https://fakestoreapi.com/products/" + id;
+    }else{
+        displayToCart();
+    }
+    
     fetch(url)
         .then(response => response.json())
         .then(data => {
