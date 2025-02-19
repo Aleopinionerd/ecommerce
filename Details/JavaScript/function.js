@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function (){
   }
 });
 
-window.onload = function (){
+/*window.onload = function (){
   loadCategories();
   localStorage.getItem("authToken");
-}
+}*/
 
 logoutButton.addEventListener("click", function(){
   if(token != null){
