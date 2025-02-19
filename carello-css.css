@@ -255,7 +255,21 @@ button.paga {
 button.paga:hover {
     background-color: #21d19f;
 }
+.metodi-pagamento {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 30px; /* Modifica la dimensione delle icone */
+}
 
+.metodi-pagamento i {
+    color: #00457C; /* Blu PayPal */
+}
+
+.metodi-pagamento i.fa-money-bill-transfer {
+    color: #FF5F00; /* Colore di Satispay */
+}
 .ct-vh{
     min-height: 50vh;
 }
